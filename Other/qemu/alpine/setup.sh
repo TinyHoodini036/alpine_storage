@@ -1,0 +1,1 @@
+qemu-system-x86_64 -enable-kvm -m 8192 -smp 4 -cpu host -display gtk -drive file=alpine_vm.img,format=raw -cdrom /home/dk/ISO/alpine-standard-3.20.1-x86_64.iso -nic user,hostfwd=tcp::5555-:22 -boot d &

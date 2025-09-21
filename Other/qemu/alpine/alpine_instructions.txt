@@ -1,0 +1,34 @@
+
+Packages:
+-doas apk add agetty
+
+
+After, edit /etc/inittab
+
+tty1::respawn:/sbin/agetty --autologin "user" tty1
+
+Graphic Interface Packages:
+xorg-server
+xinit
+xfce4
+xf86-input-libinput
+xfce4-terminal
+pcmanfm
+leafpad
+xdg-user-dirs
+udev
+dbus
+terminus-font
+font-terminus
+font-inconsolata
+font-dejavu
+font-noto
+font-noto-cjk
+font-awesome
+font-noto-extra
+font-liberation
+nerd-fonts-all
+bash
+bash-completion
+firefox
+
