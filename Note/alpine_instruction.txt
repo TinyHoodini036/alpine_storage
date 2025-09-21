@@ -1,0 +1,25 @@
+Post-Installation:
+
+$~ doas apk update && doas apk upgrade && doas apk add git
+$~ git clone https://github.com/doomking36/alpine-post
+$~ git clone https://github.com/doomking36/chadwm-scripts
+$~ cd alpine-post/
+$~ chmod +x *
+$~ ./new_alpine_post_install.sh
+$~ ./auto.sh
+$~ cd ~/chadwm-scripts
+$~ chmod +x final_bar.sh
+$~ rm -rf ~/.config/chadwm/scripts/bar.sh 
+$~ mv ~/chadwm-scripts/final_bar.sh ~/.config/chadwm/scripts/bar.sh
+$~ reboot 
+
+
+
+
+auto.sh needs fixing/improvement:
+- Needs to echo $USER into the file instead of having '$USER'
+- Fix profile as it has issue in creating it due to 'nonexistent directory'
+
+The fix that I did was editing the auto.sh line 6 from 'cat > "~/.profile" <<EOF' to 'cat > ".profile" <<EOF'
+I will add in the script to move it to /home/$USER
+
